@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
+using UnityEngine.UI;
+
 
 public class CubeMovement : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class CubeMovement : MonoBehaviour
     public float rotationSpeed = 50f;
     public bool canMove;
     //public Rigidbody rb;
-    public TMP_Text playerText;
+    public Text playerText;
 
     private void Start()
     {

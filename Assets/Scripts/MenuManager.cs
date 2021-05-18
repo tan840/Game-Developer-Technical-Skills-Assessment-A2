@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
+using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
 {
-    public TMP_Text countNumberOfCubes;
+    public Text countNumberOfCubes;
     public GameObject PauseImage;
     private GameManager gameManager;
 
@@ -25,12 +25,6 @@ public class MenuManager : MonoBehaviour
     void Start()
     {
         gameManager = GameManager.instance;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
 

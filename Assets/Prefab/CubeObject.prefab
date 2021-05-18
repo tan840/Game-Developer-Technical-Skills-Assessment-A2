@@ -130,7 +130,7 @@ MonoBehaviour:
   moveSpeed: 10
   rotationSpeed: 200
   canMove: 0
-  playerText: {fileID: 4788034312993147449}
+  playerText: {fileID: 0}
 --- !u!1 &6601578282529675391
 GameObject:
   m_ObjectHideFlags: 0
@@ -148,7 +148,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3301974873005742520
 RectTransform:
   m_ObjectHideFlags: 0
