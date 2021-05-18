@@ -5,11 +5,26 @@ using TMPro;
 
 public class MenuManager : MonoBehaviour
 {
-    [SerializeField] TMP_Text countNumberOfCubes;
-    [SerializeField] GameObject PauseImage;
+    public TMP_Text countNumberOfCubes;
+    public GameObject PauseImage;
+    private GameManager gameManager;
+
+
+    public static MenuManager instance;
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
     void Start()
     {
-        
+        gameManager = GameManager.instance;
     }
 
     // Update is called once per frame
@@ -30,11 +45,13 @@ public class MenuManager : MonoBehaviour
     #region Button Functions
     public void SpawnBtn()
     {
-
+        //print("spawn");
+        gameManager.SpawnCube();
     }
     public  void PauseBtn()
     {
-
+        //print("spawn");
+        gameManager.GamePaused();
     }
     #endregion
 }
