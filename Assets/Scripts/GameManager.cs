@@ -5,6 +5,9 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public float spawnDelay = 0.5f;
+    private float nextSpawn = 0f;
+
+
     public GameObject cubePrefab;
     public Transform spawnPoint;
 
@@ -26,8 +29,9 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKeyDown(KeyCode.C) && Time.time > nextSpawn)
         {
+            nextSpawn = Time.time + spawnDelay;
             Instantiate(cubePrefab,spawnPoint.position,spawnPoint.rotation);
         }
     }
