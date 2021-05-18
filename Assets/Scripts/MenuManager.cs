@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+/// <summary>
+/// Handles the menu buttons
+/// </summary>
+
 public class MenuManager : MonoBehaviour
 {
     public TMP_Text countNumberOfCubes;

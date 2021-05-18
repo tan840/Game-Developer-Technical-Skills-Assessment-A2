@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+/// <summary>
+/// Handles the cube movement and rotation
+/// </summary>
 public class CubeMovement : MonoBehaviour
 {
     public Transform target;

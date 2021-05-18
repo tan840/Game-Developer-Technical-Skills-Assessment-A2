@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// sets the next target
+/// </summary>
 public class NextPointToMove : MonoBehaviour
 {
     public Transform nextPoint;

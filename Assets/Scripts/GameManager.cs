@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Handles the input and Game functions
+/// </summary>
 public class GameManager : MonoBehaviour
 {
     public float spawnDelay = 1f;
