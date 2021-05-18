@@ -27,11 +27,6 @@ public class MenuManager : MonoBehaviour
         gameManager = GameManager.instance;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
 
     public void CubeCount(int val)

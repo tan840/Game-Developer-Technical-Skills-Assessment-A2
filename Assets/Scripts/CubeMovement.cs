@@ -12,12 +12,7 @@ public class CubeMovement : MonoBehaviour
     //public Rigidbody rb;
     public TMP_Text playerText;
 
-    private void Start()
-    {
-        //rb = GetComponent<Rigidbody>();
-    }
 
-    // Update is called once per frame
     void Update()
     {
         if (target != null)
@@ -25,7 +20,7 @@ public class CubeMovement : MonoBehaviour
             Quaternion rotateAngle = Quaternion.LookRotation(target.position - transform.position);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, rotateAngle, rotationSpeed *Time.deltaTime);
             //transform.LookAt(new Vector3( transform.position.x, target.position.y, transform.position.z));
-            canMove = true;
+            //canMove = true;
             //= new Vector3(0,0, moveSpeed * Time.deltaTime);
             if (canMove)
             {
@@ -34,9 +29,6 @@ public class CubeMovement : MonoBehaviour
             }
             
         }
-        else
-        {
-            //rb.velocity = Vector3.zero;
-        }
+
     }
 }

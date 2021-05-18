@@ -14,7 +14,7 @@ public class NextPointToMove : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             player = other.GetComponent<CubeMovement>();
-            player.target = null;
+            player.target = nextPoint;
             player.playerText.text = "waiting...";
             player.canMove = false;
             Invoke("SetTarget", moveDelay);
@@ -24,7 +24,7 @@ public class NextPointToMove : MonoBehaviour
     {      
         if (player!=null)
         {
-            player.target = nextPoint;
+            player.canMove = true;
         }
     }
 }
