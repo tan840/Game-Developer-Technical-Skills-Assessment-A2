@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public float spawnDelay = 0.5f;
+    public float spawnDelay = 1f;
     private float nextSpawn = 0f;
     private int numberOfCubes = 0;
 
@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.C) && Time.time > nextSpawn)
+        if (Input.GetKeyDown(KeyCode.C) )
         {
             SpawnCube();
         }
@@ -48,10 +48,14 @@ public class GameManager : MonoBehaviour
 
     public void SpawnCube()
     {
-        numberOfCubes++;
-        nextSpawn = Time.time + spawnDelay;
-        Instantiate(cubePrefab, spawnPoint.position, spawnPoint.rotation);
-        menuManager.countNumberOfCubes.text = numberOfCubes.ToString();
+        if (Time.time > nextSpawn)
+        {
+            numberOfCubes++;
+            nextSpawn = Time.time + spawnDelay;
+            Instantiate(cubePrefab, spawnPoint.position, spawnPoint.rotation);
+            menuManager.countNumberOfCubes.text = numberOfCubes.ToString();
+        }
+        
     }
 
     public void GamePaused()
