@@ -15,6 +15,8 @@ public class NextPointToMove : MonoBehaviour
         {
             player = other.GetComponent<CubeMovement>();
             player.target = null;
+            player.playerText.text = "waiting...";
+            player.canMove = false;
             Invoke("SetTarget", moveDelay);
         }
     }
